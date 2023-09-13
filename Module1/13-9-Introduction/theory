@@ -1,0 +1,41 @@
+Tops Carrer Center
+Github Account
+Java Setup
+
+1)Download the Software:
+
+Jdk[Java Development Kit] - Compiler
+Eclipse - Editor
+
+2)
+Jdk Install 
+
+3)
+Jdk Path Set
+C:\Program Files\Java\jdk1.8.0_191\bin
+
+This Pc-> right click ->Properties -> Advanced System Settings->
+environment variables -> path -> paste your path ->click on OK
+
+Open your CMD and type javac
+
+4)
+Eclipse
+https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2023-06/R/eclipse-inst-jre-win64.exe
+
+Install it
+
+4 to 5
+Lectures :
+Mon,Wed,Fri
+
+
+Practice:
+Tue,Thu,Sat
+
+
+
+
+
+
+
