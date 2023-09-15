@@ -1,0 +1,69 @@
+Project
+
+1)jre->system library
+2)src->source
+
+JDK->Java Development Kit[compiler]
+JRE->Java Runtime Environment[System Library]
+JVM-> Java Virtual machine[Machine]
+
+
+first create project
+package
+class
+
+->every class first letter should be uppercase
+->every program will execute from main method
+
+
+
+void -> return null value
+main -> method name
+
+Access Modifier/Specifier:
+
+public-> 
+private->
+protected->
+
+-------------------------
+static -> fixed
+
+--------------------------
+Java is a case sensitive language
+
+------------------------------
+data type
+
+int -> numeric value
+float -> decimal value[capacity:4 byte]
+char-> characters
+double-> decimal value[capacity:8 byte]
+String-> multi characters
+boolean->true,false
+byte-> byte format
+long-> lengthy integer value
+
+
+
+
+Arithmetic Op -> +,-,*,/,%
+Relational Op -> <,>,<=,>=,==,!=
+Shorthand Op -> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
