@@ -1,0 +1,25 @@
+Constructor:When Method Having a same as a classname
+
+Method ->Constructor
+
+types of constructor
+
+1)default
+2)Parameterized
+3)Copy
+
+If You are not using static then every time new memory allocation 
+created
+
+this - keyword - refrence keyword
+-------------------------------------------------------
+Object
+Class
+Constructor
+Method
+static
+this
+Conditions:if,else if,else,nested if,switch,case,break
+userinput
+-------------------------------------------------------
+
