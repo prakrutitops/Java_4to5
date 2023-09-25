@@ -1,0 +1,80 @@
+Loop:
+
+Entry Control Loop
+
+1)for:
+
+  for(initialization;condition;incre/decre)
+  {
+		
+  }
+
+  initialization = starting point
+  condition = ending point
+  incre/decre
+
+	
+
+2)while:
+
+ initialization;
+
+ while(condition)
+ {
+   code
+   incre/decre;
+ }
+
+
+Exit Control Loop:
+
+3)do while:
+ 
+  initialization;
+
+  do
+  {
+   code
+   incre/decre;
+  }
+
+ while(condition);
+
+
+
+for each
+
+
+
+*
+**
+***
+****
+*****
+
+1
+22
+333
+4444
+55555
+
+
+
+     *
+    **
+   ***
+  ****
+ *****
+
+     *
+   *   *
+ *  *   *
+
+
+15 Task - Module 1
+Module2
+
+
+
+
+
