@@ -1,0 +1,62 @@
+OOP:Object Oriented Programming
+
+Main Features of OOP:
+
+1)Object:Any Entity which has own state and behaviour that is called an object
+ex:pen,paper,chair etc.
+
+2)Class:collection of objects is a class
+ex: Human body
+
+3)Abstraction:Hiding internal details and showing functionalities that is called an abstraction
+ex:Login Page
+
+4)Encapsulation:Wrapping up or binding of data
+ex:Capsule
+
+5)Inheritance:When one object acquire all the properties and behaviour of parent class
+ex:Parent - child
+
+6)Polymorphism:Many Ways to Perform anything
+
+1)Method Overloading
+2)Method Overriding
+
+
+syntax of object creation:
+classname objanme =new classname();
+
+
+constructor:When Method having a same as a classname
+
+Types of Constructor
+1)Default
+2)Parameterized
+3)Copy
+
+
+Conditional Statement => If,Else if,else,nested if,switch,case
+Looping Statement => For,While,Do While
+Keywords->break,continue,this,static
+
+User Input -> Scanner
+
+
+
+Set->Account
+Get->ATM
+
+this-refrence keyword
+
+class A
+{
+	String name;
+
+	A(String name)
+	{
+		this.name=name;	
+	}
+
+}
+
+
