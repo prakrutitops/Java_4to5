@@ -1,0 +1,57 @@
+wrapper class
+
+
+int -> data type
+Integer-> Wrapper class
+
+
+Array:Collection of items
+
+1)1D 
+2)2D
+
+[size]
+
+//c language array initialize
+
+int a[5];
+
+//java language array initialize
+
+int a[] = new int[5];//1st way
+
+int b[]={fhjhjsd}//2nd way
+
+array's index always start with 0
+
+Array's can not change dynamically
+ArrayList
+
+Parent class->Object
+
+String
+Scanner
+Integer
+File
+Serialize
+
+Inheritance:When One Object Acquire all the properties and behaviour of parent class
+
+Types of Inheritance
+
+1)Single
+2)Multilevel
+3)Multiple
+4)Hierarchical
+5)Hybrid
+
+parent - child
+super - sub
+base - derived
+
+
+
+
+
+
+
