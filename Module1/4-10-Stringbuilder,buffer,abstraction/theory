@@ -1,0 +1,11 @@
+
+StringBuilder->immutable[direct no changes]
+StringBuffer->mutable[direct chnages]
+
+String 
+
+Abstraction -> Hiding internal details and showing functionalities
+
+interface: collection of abstract methods
+
+without body part
