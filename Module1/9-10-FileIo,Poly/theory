@@ -1,0 +1,21 @@
+Polymorphism:Many ways to perform anything
+Types of Poly:
+
+1)Method Overloading:When two or more methods having a same name but number of parameters are diffrent method overloading will be followed
+
+2)Method Overriding:When two or more methods having a same name and number of parameters are also same
+then method overriding will be followed
+
+
+Interface: Serializable
+
+
+Byte Format Convert
+Serialization - byte format convert
+Deserialization - normal format convert
+
+OutputStream -> Serialize
+InputStream -> Deserialize
+
+
+
