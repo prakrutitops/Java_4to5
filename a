@@ -1,0 +1,316 @@
+Serialization with inheritance:
+
+import java.io.*;
+
+class Person implements Serializable {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+class Employee extends Person {
+    private String employeeId;
+
+    public Employee(String name, int age, String employeeId) {
+        super(name, age);
+        this.employeeId = employeeId;
+    }
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+}
+
+public class SerializationWithInheritance {
+    public static void main(String[] args) {
+        // Serialize an Employee object
+        Employee employee = new Employee("John Doe", 30, "E12345");
+
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream("employee_data.ser");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+            // Serialize the Employee object
+            objectOutputStream.writeObject(employee);
+
+            objectOutputStream.close();
+            fileOutputStream.close();
+
+            System.out.println("Employee object serialized and saved to employee_data.ser");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Deserialize the Employee object
+        try {
+            FileInputStream fileInputStream = new FileInputStream("employee_data.ser");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+            // Deserialize the Employee object
+            Employee restoredEmployee = (Employee) objectInputStream.readObject();
+
+            objectInputStream.close();
+            fileInputStream.close();
+
+            // Verify the deserialized object
+            System.out.println("Name: " + restoredEmployee.getName());
+            System.out.println("Age: " + restoredEmployee.getAge());
+            System.out.println("Employee ID: " + restoredEmployee.getEmployeeId());
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Serialization with agreegation:
+
+import java.io.*;
+import java.util.ArrayList;
+
+class Address implements Serializable {
+    private String street;
+    private String city;
+    private String zipCode;
+
+    public Address(String street, String city, String zipCode) {
+        this.street = street;
+        this.city = city;
+        this.zipCode = zipCode;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    @Override
+    public String toString() {
+        return street + ", " + city + ", " + zipCode;
+    }
+}
+
+class Person implements Serializable {
+    private String name;
+    private int age;
+    private Address address;
+
+    public Person(String name, int age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Age: " + age + ", Address: " + address;
+    }
+}
+
+public class SerializationWithAggregation {
+    public static void main(String[] args) {
+        // Create an ArrayList of Persons
+        ArrayList<Person> people = new ArrayList<>();
+        people.add(new Person("John Doe", 30, new Address("123 Main St", "Cityville", "12345")));
+        people.add(new Person("Jane Smith", 25, new Address("456 Elm St", "Townsville", "54321")));
+
+        try {
+            // Serialize the ArrayList
+            FileOutputStream fileOutputStream = new FileOutputStream("people_data.ser");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+            objectOutputStream.writeObject(people);
+
+            objectOutputStream.close();
+            fileOutputStream.close();
+
+            System.out.println("ArrayList of Person objects serialized and saved to people_data.ser");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Deserialize the ArrayList
+        try {
+            FileInputStream fileInputStream = new FileInputStream("people_data.ser");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+            // Deserialize the ArrayList
+            ArrayList<Person> restoredPeople = (ArrayList<Person>) objectInputStream.readObject();
+
+            objectInputStream.close();
+            fileInputStream.close();
+
+            // Verify the deserialized objects
+            for (Person person : restoredPeople) {
+                System.out.println(person);
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+3. transient key :
+
+import java.io.*;
+
+class User implements Serializable {
+    private String username;
+    private transient String password;
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+}
+
+public class TransientSerializationExample {
+    public static void main(String[] args) {
+        // Create a User object
+        User user = new User("john_doe", "secretpassword");
+
+        // Serialize the User object
+        try {
+            FileOutputStream fileOut = new FileOutputStream("user.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(user);
+            out.close();
+            fileOut.close();
+            System.out.println("User object serialized and saved to user.ser");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Deserialize the User object
+        User restoredUser = null;
+        try {
+            FileInputStream fileIn = new FileInputStream("user.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            restoredUser = (User) in.readObject();
+            in.close();
+            fileIn.close();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // Verify the deserialized object
+        if (restoredUser != null) {
+            System.out.println("Deserialized User:");
+            System.out.println("Username: " + restoredUser.getUsername());
+            System.out.println("Password: " + restoredUser.getPassword()); // Password is null
+        }
+    }
+}
+
+
+4.Super key way:
+
+import java.io.*;
+
+class Person implements Serializable {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Employee extends Person {
+    private String employeeId;
+
+    public Employee(String name, int age, String employeeId) {
+        super(name, age); // Call the constructor of the superclass using "super"
+        this.employeeId = employeeId;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo(); // Call the superclass method using "super"
+        System.out.println("Employee ID: " + employeeId);
+    }
+}
+
+public class SerializationWithSuperExample {
+    public static void main(String[] args) {
+        // Create an Employee object
+        Employee employee = new Employee("John Doe", 30, "E12345");
+
+        // Serialize the Employee object
+        try {
+            FileOutputStream fileOut = new FileOutputStream("employee.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(employee);
+            out.close();
+            fileOut.close();
+            System.out.println("Employee object serialized and saved to employee.ser");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Deserialize the Employee object
+        Employee restoredEmployee = null;
+        try {
+            FileInputStream fileIn = new FileInputStream("employee.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            restoredEmployee = (Employee) in.readObject();
+            in.close();
+            fileIn.close();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // Verify the deserialized object
+        if (restoredEmployee != null) {
+            System.out.println("Deserialized Employee:");
+            restoredEmployee.displayInfo();
+        }
+    }
+}
+
+
+
