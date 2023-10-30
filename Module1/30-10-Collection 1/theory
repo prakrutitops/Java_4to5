@@ -1,0 +1,28 @@
+Collection Framework:
+
+class
+interface
+methods
+
+List:
+1)ArrayList
+
+2)LinkedList:
+
+ i)single linkedlist
+ii)double linkedlist
+
+Set:
+1)HashSet
+2)LinkedHashset
+
+Map:
+1)HashMap
+
+
+add->single element
+addAll-> whole list
+remove->remove single element
+removeAll->remove whole list
+retainAll->Print common detail
+
