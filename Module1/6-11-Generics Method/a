@@ -1,1 +1,72 @@
 
+Generics Method:
+compare
+compareTo
+
+Generics Type
+<>
+
+Self Type
+
+Enum
+Model Class-> 
+
+class Model
+{
+	int id;
+	String name;
+	double salary;
+}
+
+List<Model(Entity)>
+
+Generics :
+
+Interface:
+
+Comparable
+Comparator
+
+
+10
+30
+40
+20
+50
+
+
+
+10
+20
+30
+40
+50
+
+Custom Exception:
+
+Keywords:
+try
+catch
+throw
+throws
+finally
+
+
+try
+{
+	logic
+}
+catch(Error)
+{
+	refer	
+}
+finally
+{
+}
+
+throw
+throws
+Custom Exception
+
+
+	
