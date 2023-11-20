@@ -1,0 +1,3 @@
+Create a Program to Store the dynamic data in ArrayList 
+
+Create a JFrame which can take Product Name,Product Price,Product Description after saving detail data should be Serialized and save in the file .also take a one button view data on click of that it should be deserialized
