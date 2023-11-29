@@ -1,0 +1,40 @@
+View ->Database -> 
+
+create view myview as select column_name from tablename
+
+
+inner join -> SELECT * FROM location JOIN products on location.id = products.id
+Left join -> SELECT * FROM location LEFT JOIN products on location.id = products.id
+right join -> SELECT * FROM location RIGHT JOIN products on location.id = products.id
+full join ->
+SELECT * FROM location LEFT JOIN products on location.id = products.id
+UNION
+SELECT * FROM location RIGHT JOIN products on location.id = products.id
+
+
+
+Constraint Keys:
+==================================================================
+primary key ->
+ - data duplication avoid
+ - not accepted null values
+ - you can assign primary key only once in a table
+==================================================================
+foreign key ->
+ - whenever you want to pass any refrence 
+ - insted of fireign key here we can use another word INDEX
+==================================================================
+unique key ->
+ - data duplication avoid
+ - accepted null values[Only Once]
+ - you can assign unique key multiple time in a table
+
+
+-----------------------For Database Connectivity--------------------------
+ - Jar File -> External Jar file
+
+
+
+
+
+
