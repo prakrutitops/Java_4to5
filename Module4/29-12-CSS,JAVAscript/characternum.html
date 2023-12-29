@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+	<script type="text/javascript">
+
+		function checkalpha(elem,msg)
+		{
+			
+			var alphaexp= /^[a-zA-Z0-9]+$/;
+			
+			if(elem.value.match(alphaexp))
+			{
+				
+				return true;
+			}
+			else
+			{
+				alert(msg);
+				elem.focus();
+				return false;	
+			}
+			
+			
+			
+		}
+			
+
+	</script>
+
+
+
+
+
+
+</head>
+<body>
+
+	
+	<form action="">
+		<p>
+			Enter Alphabets: <input type="text" name="alphabet" id="alphabet">
+		</p>
+		
+		<p>
+			<input type="button" onclick="checkalpha(document.getElementById('alphabet'),'Please Enter Only Alphabet')" value="Check">
+		</p>
+	</form>
+
+
+</body>
+</html>
