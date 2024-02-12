@@ -8,5 +8,8 @@
 </head>
 <body>
 
+
+	Wishlist view 
+
 </body>
 </html>
