@@ -1,0 +1,30 @@
+1.
+W.A.J.P to find all interleaving of given strings.
+The given strings are: WX YZ
+The interleaving strings are: YWZX WYZX YWXZ WXYZ YZWX WYXZ 
+
+2.
+Write a program to print the area and perimeter of a triangle having sides of 3, 4 and
+5 units by creating a class named 'Triangle' without any parameter in its constructor
+
+3.
+Create an abstract class 'Parent' with a method 'message'. It has two subclasses each
+having a method with the same name 'message' that prints "This is first subclass"
+and "This is second subclass" respectively. Call the methods 'message' by creating
+an object for each subclass. 
+
+4.
+1
+2 7  
+3 8  12
+4 9  13 16
+5 10 14 17 19
+6 11 15 18 20 21
+
+5.
+W.A.J.P to create a custom exception if Customer withdraw amount which is greater
+than account balance then program will show custom exception otherwise amount
+will deduct from account balance. Account balance is: 2000 Enter withdraw amount:
+2500 
+
+
