@@ -302,11 +302,15 @@ public class RegistrationForm implements ActionListener
 			Connection con = DriverManager.getConnection(url, "root", "");
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sqlviewdata);
+
+
+
 			model.setRowCount(0);
 						
 			while(rs.next())
 			{
 				model.addRow(new Object[] {rs.getInt(1), rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getLong(6)});
+							
 			}
 		}
 		catch (Exception e) 
